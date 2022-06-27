@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Video Gallery with Animation</title>
+  <link rel="stylesheet" href="../css/videoclip.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="background"></div>
+<div class="vid-gallery">
+  <div class="item" id="vid1" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G7unOGwtB8s?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="../img/videoclip/vc1.png" />
+  </div>
+  <div class="item" id="vid2" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7V9Z23MW_3w?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="../img/videoclip/vc2.png" />
+  </div>
+  <div class="item" id="vid3" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/dEIu2CjpD2U?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="../img/videoclip/vc3.png" />
+  </div>
+  <!-- Videos Pendientes 
+  <div class="item" id="vid4" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Qn5Fd8pYlG0?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="https://i.ytimg.com/vi/Qn5Fd8pYlG0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBWI9VT4Xao8v-tmkiOUB6Uitqseg" />
+  </div>
+  <div class="item" id="vid5" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Z779J5RqK1c?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="https://i.ytimg.com/vi/Z779J5RqK1c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDc06ofZDkK2tp6E-ccQV0SKqkCsQ" />
+  </div>
+  <div class="item" id="vid6" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/k6WR_lmExqs?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="https://i.ytimg.com/vi/k6WR_lmExqs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAQuqIosF5-jiPg3oU0RMbt0360dA" />
+  </div>
+  <div class="item" id="vid7" onclick="selectVid(this)" onmouseenter="hoverItem(this,true)" onmouseleave="hoverItem(this,false)">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/2VYx81MTBPQ?controls=0&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="https://i.ytimg.com/vi/2VYx81MTBPQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkPfU8tXQLp63RxDZ0EBizkOoW7A" />
+  </div>-->
+</div>
+<div class="vid-gallery gallery-shadow">
+  <div class="item" id="shadow1">
+    <img src="../img/videoclip/vc1.png" />
+  </div>
+  <div class="item" id="shadow2">
+    <img src="../img/videoclip/vc2.png" />
+  </div>
+  <div class="item" id="shadow3">
+    <img src="../img/videoclip/vc3.png" />
+  </div>
+  <!-- Videos Pendientes
+  <div class="item" id="shadow4">
+    <img src="https://i.ytimg.com/vi/Qn5Fd8pYlG0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBWI9VT4Xao8v-tmkiOUB6Uitqseg" />
+  </div>
+  <div class="item" id="shadow5">
+    <img src="https://i.ytimg.com/vi/Z779J5RqK1c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDc06ofZDkK2tp6E-ccQV0SKqkCsQ" />
+  </div>
+  <div class="item" id="shadow6">
+    <img src="https://i.ytimg.com/vi/k6WR_lmExqs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAQuqIosF5-jiPg3oU0RMbt0360dA" />
+  </div>
+  <div class="item" id="shadow7">
+    <img src="https://i.ytimg.com/vi/2VYx81MTBPQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkPfU8tXQLp63RxDZ0EBizkOoW7A" />
+  </div> -->
+</div>
+<h1>Click on the Gallery</h1>
+<div class="floor"></div>
+<!-- partial -->
+  <script  src="../js/videoclip.js"></script>
+
+</body>
+</html>
